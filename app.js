@@ -35,7 +35,7 @@ function sortearAmigo() {
         return;
     }
 
-    const numeroSorteado = Math.floor((Math.random) * amigos.length);
+    const numeroSorteado = Math.floor((Math.random()) * amigos.length);
     const amigoSorteado = amigos[numeroSorteado];
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `O amigo sorteado foi: ${amigoSorteado}!`;
