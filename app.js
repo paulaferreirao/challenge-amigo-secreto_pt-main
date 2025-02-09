@@ -1,23 +1,21 @@
 let amigos = [];
 
 function adicionarAmigo() {
-    const inputAmigo = document.getElementById("amigo");
-    const nomeAmigo = inputAmigo.valueMax.trim();
+    const inputAmigo = document.getElementById('amigo');
+    const nomeAmigo = inputAmigo.value.trim();
 
-    // if (nomeAmigo === '') {
-    //     alert('Por favor, insira um nome.');
-    //     return;
-    // }
+    if (nomeAmigo === '') {
+        alert('Por favor, insira um nome.');
+        return;
+    }
 
-    // if (amigos.includes(nomeAmigo)) {
-    //     alert(`O nome ${nomeAmigo} já está na lista`);
-    //     return;
-    // } else {
-    //     amigos.push(nomeAmigo);
-    //     atualizarListaAmigos();
-    //     inputAmigo = document.getElementById('input');
-    //     inputAmigo.value = '';
-    // }
+    if (amigos.includes(nomeAmigo)) {
+        alert('Esse nome já está na lista.')
+    }
+
+    amigos.push(nomeAmigo);
+    atualizarListaAmigos();
+    inputAmigo.value = '';
 }
 
 function atualizarListaAmigos() { 
